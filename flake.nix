@@ -6,9 +6,9 @@
     let pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
     in
     {
-      packages.x86_64-linux.default = pkgs.buildGoModule {
+      packages.x86_64-linux.default = pkgs.buildGo122Module {
         pname = "gotemp";
-        version = "0.1.0";
+        version = "0.1.1";
         src = ./.;
         vendorHash = null;
       };
